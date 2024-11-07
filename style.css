@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: bisque;
+}
+
+.kfc {
+    height: 100vh;
+    width: 100%;
+    background-color: bisque;
+    position: relative;
+}
+
+nav {
+    width: 85%;
+    margin: auto;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.navlogo {
+    width: 150px;
+    cursor: pointer;
+}
+
+.menu {
+    width: 40px;
+    cursor: pointer;
+    visibility: hidden;
+    position: absolute;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    color: red;
+}
+
+.info {
+    margin-left: 10%;
+    margin-top: 10%;
+}
+
+.info h1 {
+    font-size: 50px;
+    color: black;
+    margin-bottom: 10px;
+}
+
+span {
+    color: red;
+}
+
+.info p {
+    color: black;
+    line-height: 1.5;
+    width: 500px;
+}
+
+.info a {
+    text-decoration: none;
+    padding: 12px 40px;
+    border-radius: 30px;
+    background-color: red;
+    display: inline;
+    color: bisque;
+    font-weight: 700;
+    margin-top: 35px;
+    box-shadow: 5px 8px 10px rgb(83, 49, 49);
+    transition: all 0.5s ease-in-out;
+    line-height: 5;
+}
+
+.info a:hover {
+    background-color: black;
+    transform: scale(0.9);
+}
+
+.sideimg {
+    width: 25%;
+    height: 75%;
+    position: absolute;
+    bottom: 6%;
+    right: 100px;
+    cursor: pointer;
+}
+
+.sideimg img {
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: bottom 1s, left 1s;
+}
+
+.sideimg:hover .backpattern {
+    bottom: 20px;
+}
+
+.sideimg:hover .chickenimg {
+    left: 55%;
+}
+
+@media screen and (max-width: 960px) {
+    .menu {
+        visibility: visible;
+        right: 50px;
+    }
+
+    nav ul li {
+        position: absolute;
+        visibility: hidden;
+    }
+
+    .info {
+        margin-left: 0%;
+        margin-top: 0;
+        text-align: center;
+    }
+
+    .info h1 {
+        font-size: 45px;
+    }
+
+    .info p {
+        width: 100%;
+    }
+
+    .sideimg {
+        width: 100%;
+        height: 50%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    .sideimg img {
+        height: 100%;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        transition: bottom 1s, left 1s;
+    }
+}
